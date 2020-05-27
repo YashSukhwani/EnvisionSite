@@ -1,11 +1,86 @@
 .carousel-control-next {
     justify-content: flex-end;
     right: 3vw;
+    align-content: center;
+    width: fit-content;
+    padding-left: 1.5vw;
 }
 
 .carousel-control-prev {
     justify-content: flex-start;
     left: 3vw;
+    align-content: center;
+    width: fit-content;
+    padding-right: 1.5vw;
+}
+
+.slide {
+    z-index: 5;
+    padding-top: 55px;
+}
+
+.navbar {
+    z-index: 8;
+    min-height: 55px;
+}
+
+.navbar-toggle {
+    min-height: 55px;
+}
+
+.banner-icons {
+    width: auto;
+    height: 2.5vh;
+    margin-right: 0.75vw;
+}
+
+.icon-text {
+    color: black;
+}
+
+.icon-box {
+    justify-content: center;
+    align-self: center;
+}
+
+.sign {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 2vw;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 10;
+    padding-top: 6px;
+    padding-right: 24px;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.call {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10vw;
+}
+
+.reach {
+    text-align: left;
+    justify-content: space-evenly;
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
 }
 
 .jumbotron p {
@@ -103,7 +178,10 @@
         monospace;
     font-family: 'Raleway', 'serif';
     width: fit-content;
+
     color: #fbf430;
+    color: #fdf74b;
+
     margin: 0px;
     text-align: left;
 }
@@ -201,6 +279,13 @@
     grid-row: 1/8;
 }
 
+
+@media screen and (max-width: 485px) {
+    .banner {
+        visibility: hidden;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .orig {
         grid-template-areas: "main"
@@ -254,6 +339,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    .call {
+        margin-right: 2vw;
+    }
+
     .eight {
         width: 100%;
     }
