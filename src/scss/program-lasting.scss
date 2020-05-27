@@ -1,0 +1,103 @@
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000435;
+    color: white;
+    text-align: center;
+    display: flex;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.onee {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "two three";
+}
+
+.ttwo {
+    background-color: red($color: #08bea0);
+    color: red($color: #dd0000);
+    grid-area: two;
+}
+
+.tthree {
+    grid-area: three;
+}
+
+.destin {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0;
+    align-items: left;
+    padding: 0;
+}
+
+.destin-part2 {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0 0;
+}
+
+.destin-part1 {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0 0;
+    padding-right: 20px;
+}
+
+.side {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: visible;
+    width: fit-content;
+    padding: 0vw;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0vw;
+    width: max-content;
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0vw;
+    width: max-content;
+}
+
+.top {
+    width: max-content;
+}
+
+.leader {
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Inconsolata',
+        monospace;
+    font-family: 'Raleway', 'serif';
+    width: fit-content;
+    color: #fbf430;
+    margin: 0px;
+    text-align: left;
+}
+
+.data {
+    font-family: 'Inconsolata',
+        monospace;
+    width: fit-content;
+    text-align: left;
+}
