@@ -1,5 +1,5 @@
 .footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -14,20 +14,40 @@
     flex-direction: row;
 }
 
-.onee {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "two three";
+h1 {
+    text-align: left;
+    color: rgb(15, 15, 68);
+    font-weight: bold;
+    font-family: 'Playfair',
+        'serif';
+    padding-bottom: 10px;
 }
 
-.ttwo {
-    background-color: red($color: #08bea0);
-    color: red($color: #dd0000);
-    grid-area: two;
+.flex-contain {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 40pt;
+    justify-content: space-between
 }
 
-.tthree {
-    grid-area: three;
+.one {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: max-content;
+    padding: 25pt;
+    justify-content: stretch;
+}
+
+.two {
+    min-width: 310px;
+    height: max-content;
+}
+
+.three {
+    min-width: 310px;
+    height: max-content;
 }
 
 .destin {
@@ -100,4 +120,43 @@
         monospace;
     width: fit-content;
     text-align: left;
+}
+
+@media screen and (max-width: 550px) {
+
+    .footer {
+        justify-content: left;
+    }
+
+    .connect {
+        margin-top: 18px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .services,
+    .connect {
+        padding: 5vw;
+    }
+
+    .destin {
+        margin: 5vw;
+    }
+
+    .connect {
+        padding-top: 0;
+    }
+
+    .footer {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .two {
+        margin-bottom: 15px;
+    }
 }
