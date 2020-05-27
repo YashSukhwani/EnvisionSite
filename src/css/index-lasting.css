@@ -158,7 +158,8 @@
 .data {
   font-family: 'Inconsolata', monospace;
   width: fit-content;
-  text-align: left; }
+  text-align: left;
+  color: #ffffff49; }
 
 .orig {
   display: grid;

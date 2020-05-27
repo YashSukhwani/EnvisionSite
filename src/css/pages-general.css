@@ -104,7 +104,8 @@ h1 {
 .data {
   font-family: 'Inconsolata', monospace;
   width: fit-content;
-  text-align: left; }
+  text-align: left;
+  color: #ffffff49; }
 
 @media screen and (max-width: 550px) {
   .footer {
