@@ -201,15 +201,37 @@
     align-items: center;
 }
 
+#name1 {
+    width: 40%;
+}
+
+#name2 {
+    width: 40%;
+}
+
+#phone {
+    width: 53%;
+}
+
+#country-code {
+    width: 27%;
+}
 
 #email {
     width: 80%;
+}
+
+.surround {
+    display: flex;
+    justify-content: center;
 }
 
 .form-sub-btn {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    font-family: 'Playfair Display',
+        sans-serif;
 }
 
 .form-submit-cont {
@@ -245,16 +267,6 @@
     width: 100%;
 }
 
-#phone {
-    width: 53%;
-    margin-left: 27%;
-}
-
-#country-code {
-    width: 27%;
-    float: left;
-}
-
 .four {
     grid-area: 4;
 }
@@ -273,20 +285,9 @@
     grid-area: 1
 }
 
-#name1 {
-    width: 40%;
-    float: left;
-}
-
-#name2 {
-    width: 40%;
-    margin-left: 40%;
-}
-
 .last {
     grid-row: 1/8;
 }
-
 
 @media screen and (max-width: 485px) {
     .banner {
@@ -298,39 +299,6 @@
     .orig {
         grid-template-areas: "main"
             "four""five""six""seven""eight""last";
-    }
-
-    .six {
-        width: 75vw;
-    }
-
-    .seven {
-        width: 75vw;
-    }
-
-    .eight {
-        width: 75vw;
-    }
-
-    .two {
-        width: 75vw;
-    }
-
-    #name1 {
-        width: 75vw;
-    }
-
-    #name2 {
-        width: 75vw;
-        margin-left: 0vw;
-    }
-
-    #email {
-        width: 75vw;
-    }
-
-    .five {
-        width: 75vw;
     }
 
     #country-code {
@@ -377,7 +345,6 @@
 
     #name2 {
         width: 50%;
-        margin-left: 50%;
     }
 
     #email {
