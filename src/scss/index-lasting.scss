@@ -36,6 +36,9 @@
 
 .icon-text {
     color: black;
+    font-family: 'Inconsolata',
+        monospace;
+    font-size: 14pt;
 }
 
 .icon-box {
@@ -81,6 +84,13 @@
     align-content: space-between;
     display: flex;
     flex-direction: row;
+}
+
+h2 {
+    color: #000435;
+    font-family: 'Arima Madurai',
+        cursive;
+    font-size: 36pt;
 }
 
 .jumbotron p {
@@ -196,34 +206,57 @@
 
 .orig {
     display: grid;
-    grid-template-areas: "last 2""last 4""last 5""last 6""last 7""last 8";
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-flow: column;
+
     justify-items: center;
     align-items: center;
+    justify-self: center;
+    align-self: center;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 }
 
-#name1 {
-    width: 40%;
+.encompass {
+    margin: 0;
+    margin-left: 1.5vw;
+    padding: 0;
 }
 
-#name2 {
-    width: 40%;
-}
-
-#phone {
-    width: 53%;
-}
-
-#country-code {
-    width: 27%;
-}
-
-#email {
-    width: 80%;
-}
-
-.surround {
+.last {
     display: flex;
     justify-content: center;
+    align-content: center;
+}
+
+.form-pic-box {
+    height: max-content;
+    width: max-content;
+    justify-content: center;
+    align-self: center;
+    margin-right: 1.5vw;
+}
+
+.form-pic {
+    max-width: 50vw;
+    height: 300px;
+    border-style: solid;
+    border-color: #000435;
+    align-content: center;
+}
+
+.form-submit-cont {
+    display: flex;
+    padding: 0;
+}
+
+.form-submit-div {
+    width: 100%;
 }
 
 .form-sub-btn {
@@ -234,31 +267,43 @@
         sans-serif;
 }
 
-.form-submit-cont {
+#name1 {
+    width: 50%;
+}
+
+#name2 {
+    width: 50%;
+}
+
+#phone {
+    width: 70%;
+}
+
+#country-code {
+    width: 30%;
+}
+
+#email {
+    width: 100%;
+}
+
+.surround {
     display: flex;
-    padding: 0;
-}
-
-.form-submit-div {
-    width: 80%;
-}
-
-.last {
-    width: 40vw;
+    justify-content: center;
 }
 
 .eight {
-    width: 80%;
+    width: 100%;
     grid-area: 8;
 }
 
 .seven {
-    width: 80%;
+    width: 100%;
     grid-area: 7;
 }
 
 .six {
-    width: 80%;
+    width: 100%;
     grid-area: 6;
 }
 
@@ -271,12 +316,7 @@
     grid-area: 4;
 }
 
-.three {
-    grid-area: 3;
-}
-
 .two {
-    width: 48vw;
     margin: 0 auto;
     grid-area: 2;
 }
@@ -285,82 +325,50 @@
     grid-area: 1
 }
 
-.last {
-    grid-row: 1/8;
-}
-
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 420px) {
     .banner {
         visibility: hidden;
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .orig {
-        grid-template-areas: "main"
-            "four""five""six""seven""eight""last";
+        grid-template-areas: "row-one"
+            "row-two";
+        margin-right: 0;
+        margin-left: 0;
     }
 
-    #country-code {
-        width: 15vw;
+    .encompass {
+        width: 90%;
     }
 
-    #phone {
-        width: 60vw;
+    .icon-text {
+        font-size: 9.5pt;
     }
 
     .footer {
         justify-content: left;
     }
+
+    .form-pic {
+        margin-bottom: 30px;
+        max-width: 90vw;
+    }
+
+    .form-pic-box {
+        margin-right: 0;
+    }
+
+    .encompass {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    .form-submit-div {
-        width: 100%;
-    }
 
     .call {
         margin-right: 2vw;
-    }
-
-    .eight {
-        width: 100%;
-    }
-
-    .seven {
-        width: 100%;
-    }
-
-    .six {
-        width: 100%;
-    }
-
-    .two {
-        width: 100%;
-    }
-
-    #name1 {
-        width: 50%;
-    }
-
-    #name2 {
-        width: 50%;
-    }
-
-    #email {
-        width: 100%;
-    }
-
-    .five {
-        width: 100%;
-    }
-
-    #country-code {
-        width: 30%;
-    }
-
-    #phone {
-        width: 70%;
     }
 
     .services,
