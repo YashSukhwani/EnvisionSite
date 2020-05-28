@@ -420,131 +420,134 @@
           </div>
         </div>
         <div>
-          <div class="main">
-            <div class="two">
-              <input class="form-control" autocomplete="off" required type="text" id="name1" placeholder="First Name" />
-              <input class="form-control" autocomplete="off" required type="text" id="name2" placeholder="Last Name" />
+          <div class="two surround">
+            <input class="form-control" autocomplete="off" required type="text" id="name1" placeholder="First Name" />
+            <input class="form-control" autocomplete="off" required type="text" id="name2" placeholder="Last Name" />
+          </div>
+          <div class="surround">
+            <div class="four">
+              <input class="form-control" autocomplete="off" required type="email" id="email" placeholder="Email" />
             </div>
-            <div>
-              <div class="four">
-                <input class="form-control" autocomplete="off" required type="email" id="email" placeholder="Email" />
-              </div>
+          </div>
+          <div>
+            <div class="surround five">
+              <select class="form-control" id="country-code" name="country-code">
+                <option value="india">+91</option>
+              </select>
+              <input class="form-control" autocomplete="off" required type="tel" id="phone" pattern="[0-9]{10}"
+                maxlength="10" onkeypress="return CheckPhone(this, event);" placeholder="Phone Number" />
             </div>
-            <div>
-              <div class="five">
-                <select class="form-control" id="country-code" name="country-code">
-                  <option value="india">+91</option>
-                </select>
-                <input class="form-control" autocomplete="off" required type="tel" id="phone" pattern="[0-9]{10}"
-                  maxlength="10" onkeypress="return CheckPhone(this, event);" placeholder="Phone Number" />
-              </div>
+          </div>
+          <div class="surround">
+            <div class="six">
+              <select class="form-control" id="nearest-office" name="nearest-office">
+                <option disabled selected value="">Nearest Envision Office</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Chandigarh">Chandigarh</option>
+              </select>
             </div>
-            <div>
-              <div class="six">
-                <select class="form-control" id="nearest-office" name="nearest-office">
-                  <option disabled selected value="">Nearest Envision Office</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                  <option value="Bangalore">Bangalore</option>
-                  <option value="New Delhi">New Delhi</option>
-                  <option value="Chandigarh">Chandigarh</option>
-                </select>
-              </div>
+          </div>
+          <div class="surround">
+            <div class="seven">
+              <select class="form-control" id="destination" name="destination">
+                <option disabled selected value="">Preferred Study Destination</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Italy">Italy</option>
+                <option value="Germany">Germany</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="France">France</option>
+              </select>
             </div>
-            <div>
-              <div class="seven">
-                <select class="form-control" id="destination" name="destination">
-                  <option disabled selected value="">Preferred Study Destination</option>
-                  <option value="UK">UK</option>
-                  <option value="Australia">Australia</option>
-                  <option value="New Zealand">New Zealand</option>
-                  <option value="USA">USA</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Ireland">Ireland</option>
-                  <option value="Italy">Italy</option>
-                  <option value="Germany">Germany</option>
-                  <option value="Dubai">Dubai</option>
-                  <option value="Switzerland">Switzerland</option>
-                  <option value="France">France</option>
-                </select>
-              </div>
+          </div>
+          <div class="surround">
+            <div class="eight">
+              <select class="form-control" id="intake" name="intake">
+                <option disabled selected value="">When Do You Plan To Study ?</option>
+                <option value="May 2020">May 2020</option>
+                <option value="June 2020">June 2020</option>
+                <option value="July 2020">July 2020</option>
+                <option value="August 2020">August 2020</option>
+                <option value="September 2020">September 2020</option>
+                <option value="October 2020">October 2020</option>
+                <option value="November 2020">November 2020</option>
+                <option value="December 2020">December 2020</option>
+                <option value="January 2021">January 2021</option>
+                <option value="February 2021">February 2021</option>
+                <option value="March 2021">March 2021</option>
+                <option value="April 2021">April 2021</option>
+                <option value="May 2021">May 2021</option>
+                <option value="June 2021">June 2021</option>
+                <option value="July 2021">July 2021</option>
+                <option value="August 2021">August 2021</option>
+                <option value="September 2021">September 2021</option>
+                <option value="October 2021">October 2021</option>
+                <option value="November 2021">November 2021</option>
+                <option value="December 2021">December 2021</option>
+                <option value="January 2022">January 2022</option>
+                <option value="February 2022">February 2022</option>
+                <option value="March 2022">March 2022</option>
+                <option value="April 2022">April 2022</option>
+                <option value="May 2022">May 2022</option>
+                <option value="June 2022">June 2022</option>
+                <option value="July 2022">July 2022</option>
+                <option value="August 2022">August 2022</option>
+                <option value="September 2022">September 2022</option>
+                <option value="October 2022">October 2022</option>
+                <option value="November 2022">November 2022</option>
+                <option value="December 2022">December 2022</option>
+                <option value="January 2023">January 2023</option>
+                <option value="February 2023">February 2023</option>
+                <option value="March 2023">March 2023</option>
+                <option value="April 2023">April 2023</option>
+                <option value="May 2023">May 2023</option>
+                <option value="June 2023">June 2023</option>
+                <option value="July 2023">July 2023</option>
+                <option value="August 2023">August 2023</option>
+                <option value="September 2023">September 2023</option>
+                <option value="October 2023">October 2023</option>
+                <option value="November 2023">November 2023</option>
+                <option value="December 2023">December 2023</option>
+                <option value="January 2024">January 2024</option>
+                <option value="February 2024">February 2024</option>
+                <option value="March 2024">March 2024</option>
+                <option value="April 2024">April 2024</option>
+                <option value="May 2024">May 2024</option>
+                <option value="June 2024">June 2024</option>
+                <option value="July 2024">July 2024</option>
+                <option value="August 2024">August 2024</option>
+                <option value="September 2024">September 2024</option>
+                <option value="October 2024">October 2024</option>
+                <option value="November 2024">November 2024</option>
+                <option value="December 2024">December 2024</option>
+                <option value="January 2025">January 2025</option>
+                <option value="February 2025">February 2025</option>
+                <option value="March 2025">March 2025</option>
+                <option value="April 2025">April 2025</option>
+                <option value="May 2025">May 2025</option>
+                <option value="June 2025">June 2025</option>
+                <option value="July 2025">July 2025</option>
+                <option value="August 2025">August 2025</option>
+                <option value="September 2025">September 2025</option>
+                <option value="October 2025">October 2025</option>
+                <option value="November 2025">November 2025</option>
+                <option value="December 2025">December 2025</option>
+              </select>
             </div>
-            <div>
-              <div class="eight">
-                <select class="form-control" id="intake" name="intake">
-                  <option disabled selected value="">When Do You Plan To Study ?</option>
-                  <option value="May 2020">May 2020</option>
-                  <option value="June 2020">June 2020</option>
-                  <option value="July 2020">July 2020</option>
-                  <option value="August 2020">August 2020</option>
-                  <option value="September 2020">September 2020</option>
-                  <option value="October 2020">October 2020</option>
-                  <option value="November 2020">November 2020</option>
-                  <option value="December 2020">December 2020</option>
-                  <option value="January 2021">January 2021</option>
-                  <option value="February 2021">February 2021</option>
-                  <option value="March 2021">March 2021</option>
-                  <option value="April 2021">April 2021</option>
-                  <option value="May 2021">May 2021</option>
-                  <option value="June 2021">June 2021</option>
-                  <option value="July 2021">July 2021</option>
-                  <option value="August 2021">August 2021</option>
-                  <option value="September 2021">September 2021</option>
-                  <option value="October 2021">October 2021</option>
-                  <option value="November 2021">November 2021</option>
-                  <option value="December 2021">December 2021</option>
-                  <option value="January 2022">January 2022</option>
-                  <option value="February 2022">February 2022</option>
-                  <option value="March 2022">March 2022</option>
-                  <option value="April 2022">April 2022</option>
-                  <option value="May 2022">May 2022</option>
-                  <option value="June 2022">June 2022</option>
-                  <option value="July 2022">July 2022</option>
-                  <option value="August 2022">August 2022</option>
-                  <option value="September 2022">September 2022</option>
-                  <option value="October 2022">October 2022</option>
-                  <option value="November 2022">November 2022</option>
-                  <option value="December 2022">December 2022</option>
-                  <option value="January 2023">January 2023</option>
-                  <option value="February 2023">February 2023</option>
-                  <option value="March 2023">March 2023</option>
-                  <option value="April 2023">April 2023</option>
-                  <option value="May 2023">May 2023</option>
-                  <option value="June 2023">June 2023</option>
-                  <option value="July 2023">July 2023</option>
-                  <option value="August 2023">August 2023</option>
-                  <option value="September 2023">September 2023</option>
-                  <option value="October 2023">October 2023</option>
-                  <option value="November 2023">November 2023</option>
-                  <option value="December 2023">December 2023</option>
-                  <option value="January 2024">January 2024</option>
-                  <option value="February 2024">February 2024</option>
-                  <option value="March 2024">March 2024</option>
-                  <option value="April 2024">April 2024</option>
-                  <option value="May 2024">May 2024</option>
-                  <option value="June 2024">June 2024</option>
-                  <option value="July 2024">July 2024</option>
-                  <option value="August 2024">August 2024</option>
-                  <option value="September 2024">September 2024</option>
-                  <option value="October 2024">October 2024</option>
-                  <option value="November 2024">November 2024</option>
-                  <option value="December 2024">December 2024</option>
-                  <option value="January 2025">January 2025</option>
-                  <option value="February 2025">February 2025</option>
-                  <option value="March 2025">March 2025</option>
-                  <option value="April 2025">April 2025</option>
-                  <option value="May 2025">May 2025</option>
-                  <option value="June 2025">June 2025</option>
-                  <option value="July 2025">July 2025</option>
-                  <option value="August 2025">August 2025</option>
-                  <option value="September 2025">September 2025</option>
-                  <option value="October 2025">October 2025</option>
-                  <option value="November 2025">November 2025</option>
-                  <option value="December 2025">December 2025</option>
-                </select>
-              </div>
+          </div>
+          <div class="container form-submit-cont surround">
+            <div class="form-submit-div">
+              <button type="submit" class="btn btn-dark form-sub-btn">Submit</button>
             </div>
           </div>
         </div>

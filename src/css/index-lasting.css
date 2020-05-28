@@ -163,16 +163,23 @@
 
 .orig {
   display: grid;
-  grid-template-areas: "last main" "last 4" "last 5" "last 6" "last 7" "last 8";
+  grid-template-areas: "last 2" "last 4" "last 5" "last 6" "last 7" "last 8";
   justify-items: center;
   align-items: center; }
 
-.main {
-  display: inline-block;
-  grid-template-areas: "two three";
-  grid-area: main; }
-
 #email {
+  width: 80%; }
+
+.form-sub-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+.form-submit-cont {
+  display: flex;
+  padding: 0; }
+
+.form-submit-div {
   width: 80%; }
 
 .last {
@@ -184,8 +191,7 @@
 
 .seven {
   width: 80%;
-  grid-area: 7;
-  text-align: center; }
+  grid-area: 7; }
 
 .six {
   width: 80%;
@@ -193,9 +199,7 @@
 
 .five {
   grid-area: 5;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center; }
+  width: 100%; }
 
 #phone {
   width: 53%;
@@ -262,6 +266,8 @@
     justify-content: left; } }
 
 @media screen and (max-width: 800px) {
+  .form-submit-div {
+    width: 100%; }
   .call {
     margin-right: 2vw; }
   .eight {
