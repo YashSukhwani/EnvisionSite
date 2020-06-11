@@ -1,0 +1,1 @@
+const MAPKEY = 'AIzaSyAGtVQ7Oef5vuL_LnCiLm2gnUUfekDC8DI';
