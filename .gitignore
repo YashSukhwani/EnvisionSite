@@ -1,3 +1,5 @@
 node_modules
 JS Practice
 .env
+.vscode
+map-key.js
