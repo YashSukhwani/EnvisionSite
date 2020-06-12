@@ -1,10 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const authRoute = require('./routes/auth');
 
 require('dotenv').config();
-
 
 let app = express();
 let urlencodedPaser = bodyParser.urlencoded({
@@ -24,12 +22,8 @@ app.post('/index', urlencodedPaser, (req, res) => {
   });
 });
 
-// TUTORIAL CODE START
-
 const cors = require('cors');
-
 app.use(cors());
-app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, {
@@ -40,12 +34,18 @@ mongoose.connect(uri, {
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
-})
+});
+
+app.use(express.json());
 
 const studentRouter = require('./routes/students');
 app.use('/students', studentRouter);
 
-// TUTORIAL CODE END
+const authRoute = require('./routes/auth');
+app.use('/api/counselors', authRoute);
+
+// The above two app.use() statements would not work if placed before
+// the database connection statement. Remember this. Wasted lots of time.
 
 // DEFINING PAGE ROUTES
 app.get('/index', (req, res) => {
