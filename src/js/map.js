@@ -59,6 +59,14 @@ function initMap() {
   directionsService = new google.maps.DirectionsService();
   directionsRenderer = new google.maps.DirectionsRenderer();
 
+  var image = {
+    url: '../assets/icons/icon.png',
+    size: new google.maps.Size(71, 71),
+    scaledSize: new google.maps.Size(25, 25),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(17, 34)
+  };
+
   // The map, centered at India
   let map = new google.maps.Map(
     document.getElementById('map'), {
@@ -70,7 +78,8 @@ function initMap() {
   // The marker, positioned at India
   const mumbai_mark = new google.maps.Marker({
     position: mumbai,
-    map: map
+    map: map,
+    icon: image
   });
   const delhi_mark = new google.maps.Marker({
     position: delhi,
