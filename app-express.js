@@ -44,6 +44,9 @@ app.use('/students', studentRouter);
 const authRoute = require('./routes/auth');
 app.use('/api/counselors', authRoute);
 
+const dataRoute = require('./routes/studentData');
+app.use('/api/data', dataRoute);
+
 // The above two app.use() statements would not work if placed before
 // the database connection statement. Remember this. Wasted lots of time.
 

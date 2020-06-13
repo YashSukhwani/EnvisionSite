@@ -94,4 +94,7 @@ router.patch('/:StudentId', async (req, res) => {
   }
 });
 
+// All the above methods return the complete JSON object upon
+// successful execution.
+
 module.exports = router;
