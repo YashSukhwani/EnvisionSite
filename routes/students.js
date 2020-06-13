@@ -6,12 +6,6 @@ let urlencodedPaser = bodyParser.urlencoded({
   extended: false
 });
 
-router.route('/').get((req, res) => {
-  Student.find()
-    .then(students => res.json(students))
-    .catch(err => res.status(400).json('Error: ' + err));
-});
-
 router.route('/add').post(urlencodedPaser, (req, res) => {
   const fname = req.body.fname;
   const lname = req.body.lname;
@@ -45,56 +39,5 @@ router.route('/add').post(urlencodedPaser, (req, res) => {
     }))
     .catch(err => res.status(400).json('Error: ' + err));
 });
-
-router.get('/:StudentId', async (req, res) => {
-  try {
-    const singleStudent = await Student.findById({
-      _id: req.params.StudentId
-    });
-    res.json(singleStudent);
-  } catch (err) {
-    res.json({
-      message: err
-    });
-  }
-});
-
-router.delete('/:StudentId', async (req, res) => {
-  try {
-    const removedStudent = await Student.deleteOne({
-      _id: req.params.StudentId
-    });
-    res.json(removedStudent);
-  } catch (err) {
-    res.json({
-      message: err
-    });
-  }
-});
-
-router.patch('/:StudentId', async (req, res) => {
-  try {
-    const updatedStudent = await Student.updateMany({
-      _id: req.params.StudentId
-    }, {
-      $set: {
-        name: req.body.name,
-        email: req.body.email,
-        mobile: req.body.mobile,
-        nearest_office: req.body.nearest_office,
-        destination: req.body.destination,
-        intake: req.body.intake
-      }
-    });
-    res.json(updatedStudent);
-  } catch (err) {
-    res.json({
-      message: err
-    });
-  }
-});
-
-// All the above methods return the complete JSON object upon
-// successful execution.
 
 module.exports = router;
