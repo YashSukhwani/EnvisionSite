@@ -14,8 +14,6 @@
   justify-content: center; }
 
 .four {
-  width: 90vw;
-  justify-content: left;
   margin: 0;
   padding: 100/3px;
   padding-left: 145/3px; }
@@ -29,6 +27,12 @@
   width: 100%;
   /* The width is the width of the web page */ }
 
+.outside {
+  margin: 0;
+  padding: 30px;
+  padding-top: 0px;
+  justify-content: space-around; }
+
 .mode,
 .radio,
 .label1 {
@@ -36,3 +40,14 @@
 
 .label1 {
   font-weight: 600; }
+
+@media screen and (max-width: 720px) {
+  .one {
+    flex-direction: column; }
+  .two,
+  .three {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px; }
+  #mode-box {
+    margin: 0; } }
