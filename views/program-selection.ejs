@@ -18,16 +18,13 @@
   <link rel="stylesheet" href="/css/bootstrap.css" />
   <link rel="stylesheet" href="/css/index-styles.css" />
   <link rel="stylesheet" href="/css/pages-general.css" />
-  <link rel="shortcut icon" type="image/ico" href="./src/assets/Icons/favIcon.ico" />
-  <link rel="shortcut icon" type="image/ico" href="./assets/Icons/icon-multi-size.ico" />
-  <link rel="shortcut icon" type="image/ico" href="./assets/Icons/browser-icon.ico" />
+  <%- include('./partials/browser-icons'); -%>
 </head>
 
 <body>
+  <%- include('./partials/nav'); -%>
+
   <div class="flex-contain">
-
-    <%- include('./partials/nav'); -%>
-
     <div class="container-fluid">
       <div class="row one">
         <div class="col two">
@@ -64,8 +61,8 @@
       </div>
     </div>
 
-
     <%- include('./partials/footer'); -%>
+
   </div>
 
 

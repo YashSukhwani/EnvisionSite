@@ -13,6 +13,13 @@
   flex-wrap: wrap;
   flex-direction: row; }
 
+.navbar {
+  z-index: 8;
+  min-height: 55px; }
+
+.navbar-toggle {
+  min-height: 55px; }
+
 h1 {
   text-align: left;
   color: #0f0f44;

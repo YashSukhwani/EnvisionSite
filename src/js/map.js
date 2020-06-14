@@ -60,7 +60,7 @@ function initMap() {
   directionsRenderer = new google.maps.DirectionsRenderer();
 
   var image = {
-    url: '../assets/icons/Marker3.png',
+    url: '../assets/icons/Marker3.svg',
     size: new google.maps.Size(71, 71),
     scaledSize: new google.maps.Size(21, 36),
     origin: new google.maps.Point(0, 0),

@@ -47,10 +47,14 @@ app.use('/api/counselors', authRoute);
 const dataRoute = require('./routes/studentData');
 app.use('/api/data', dataRoute);
 
+// for information-based pages
+const pagesRoute = require('./routes/pages');
+app.use('/pages', pagesRoute);
+
 // The above two app.use() statements would not work if placed before
 // the database connection statement. Remember this. Wasted lots of time.
 
-// DEFINING PAGE ROUTES
+// DEFINING MAIN PAGE ROUTES
 app.get('/index', (req, res) => {
   res.render('index');
 });
@@ -59,38 +63,14 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/find-us', (req, res) => {
-  res.render('find-us');
-});
-
-app.get('/program-selection', (req, res) => {
-  res.render('program-selection');
-});
-
-app.get('/find-accom', (req, res) => {
-  res.render('find-accom');
-});
-
-app.get('/error-page', (req, res) => {
-  res.render('error-page');
-});
-
-app.get('/pre-depart', (req, res) => {
-  res.render('pred-depart');
-});
-
-app.get('/visa-guid', (req, res) => {
-  res.render('visa-guid');
-});
-
-app.get('/appl-guid', (req, res) => {
-  res.render('appl-guid');
-});
-
 app.get('/login', (req, res) => {
   res.render('student-login');
 });
 
-// END OF PAGE ROUTES
+app.get('/pre-depart', (req, res) => {
+  res.render('pre-depart');
+});
+
+// END OF MAIN PAGE ROUTES
 
 app.listen(3000);
