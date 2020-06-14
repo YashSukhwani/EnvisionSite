@@ -15,20 +15,20 @@ var pune = {
   lng: 73.880115
 }
 var delhi = {
-  lat: 28.568900,
-  lng: 77.230463
+  lat: 28.572067,
+  lng: 77.233389
 }
 var chandigarh = {
-  lat: 30.722995,
-  lng: 76.770431
+  lat: 30.722864,
+  lng: 76.770346
 }
 var bangalore = {
   lat: 12.975502,
   lng: 77.616245
 }
 var mumbai = {
-  lat: 18.997584,
-  lng: 72.825244
+  lat: 18.997282,
+  lng: 72.824878
 }
 
 function getLocation() {
@@ -49,7 +49,7 @@ function showPosition(position) {
     lng: 77.0
   };
   // changed to current after testing
-  findRoute(india);
+  findRoute(current);
 }
 
 // Initialize and add the map
@@ -60,11 +60,11 @@ function initMap() {
   directionsRenderer = new google.maps.DirectionsRenderer();
 
   var image = {
-    url: '../assets/icons/icon.png',
+    url: '../assets/icons/Marker3.png',
     size: new google.maps.Size(71, 71),
-    scaledSize: new google.maps.Size(25, 25),
+    scaledSize: new google.maps.Size(21, 36),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(17, 34)
+    anchor: new google.maps.Point(20, 36)
   };
 
   // The map, centered at India
@@ -83,19 +83,23 @@ function initMap() {
   });
   const delhi_mark = new google.maps.Marker({
     position: delhi,
-    map: map
+    map: map,
+    icon: image
   });
   const bangalore_mark = new google.maps.Marker({
     position: bangalore,
-    map: map
+    map: map,
+    icon: image
   });
   const chandigarh_mark = new google.maps.Marker({
     position: chandigarh,
-    map: map
+    map: map,
+    icon: image
   });
   const pune_mark = new google.maps.Marker({
     position: pune,
-    map: map
+    map: map,
+    icon: image
   });
 
   directionsRenderer.setMap(map);

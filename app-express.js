@@ -87,6 +87,10 @@ app.get('/appl-guid', (req, res) => {
   res.render('appl-guid');
 });
 
+app.get('/login', (req, res) => {
+  res.render('student-login');
+});
+
 // END OF PAGE ROUTES
 
 app.listen(3000);

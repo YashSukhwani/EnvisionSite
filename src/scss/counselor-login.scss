@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 42rem;
+}
+
+h5 {
+    font-family: 'Raleway',
+        serif;
+    font-size: 30pt;
+    text-align: center;
+}
+
+.card-text {
+    font-family: 'Raleway',
+        serif;
+    text-align: center;
+}
+
+#username,
+#password {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.btn {
+    display: flex;
+    width: max-content;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 550px) {
+
+    #username,
+    #password {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

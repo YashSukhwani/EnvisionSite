@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Counselor Login - Envision Overseas</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/index-styles.css" />
+  <link rel="stylesheet" href="/css/pages-general.css" />
+  <link rel="stylesheet" href="/css/counselor-login.css" />
+  <link rel="shortcut icon" type="image/ico" href="./src/assets/Icons/favIcon.ico" />
+  <link rel="shortcut icon" type="image/ico" href="./assets/Icons/icon-multi-size.ico" />
+  <link rel="shortcut icon" type="image/ico" href="./assets/Icons/browser-icon.ico" />
+</head>
+
+<body>
+  <div class="flex-contain">
+    <div class="container-fluid main">
+      <div class="card">
+        <img src="/assets/Logos/White Brand.png" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Sign In</h5>
+          <p class="card-text">to continue to Envision-Counselor</p>
+          <form method="post" action="/api/counselors">
+            <input class="form-control" autocomplete="off" required type="text" id="username" name='username'
+              placeholder="Username" />
+            <input class="form-control" autocomplete="off" required type="text" id="password" name='password'
+              placeholder="Password" />
+            <br>
+            <button class="btn form-sub-btn btn-dark">Proceed</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="src/js/jquery.min.js"></script>
+  <script src="src/js/popper.min.js"></script>
+  <script src="src/js/bootstrap.min.js"></script>
+</body>
+
+</html>

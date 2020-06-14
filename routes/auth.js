@@ -79,4 +79,9 @@ router.route('/login').post(urlencodedPaser, async (req, res) => {
 
 });
 
+// COUNSELOR LOGIN ROUTE
+router.route('/login').get((req, res) => {
+  res.render('counselor-login');
+});
+
 module.exports = router;
