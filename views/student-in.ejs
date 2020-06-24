@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Student Home - Envision Overseas
+  </title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/index-styles.css" />
+  <link rel="stylesheet" href="/css/pages-general.css" />
+  <%- include('./partials/browser-icons'); -%>
+</head>
+
+<body>
+  <div class="flex-contain">
+
+    <h1>Welcome <%- data.fname -%></h1>
+    <%- include('./partials/nav'); -%>
+
+    <div class="container-fluid">
+      <div class="card option">
+        <img class="card-img-top" src="/src/assets/Images/Image2.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Pre-Departure</h5>
+          <p class="card-text">Pre-departure events are your final preparation from Envision before your
+            send-off. You'll meet current and former Envision students there, as well as hear from our partners
+            on how to make the most of your experience.
+          </p>
+          <a href="#" class="btn btn-primary">Book my slow now</a>
+        </div>
+      </div>
+
+      <div class="card option">
+        <img class="card-img-top" src="/src/assets/Images/Image2.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Visa Documentation Checks</h5>
+          <p class="card-text">Learn more about preparing your documents for your student visa application.
+          </p>
+          <a href="#" class="btn btn-primary">Learn about the visa process</a>
+        </div>
+      </div>
+
+      <div class="card option">
+        <img class="card-img-top" src="/src/assets/Images/Image2.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Track Offers</h5>
+          <p class="card-text">Stay on top of your application.
+          </p>
+          <a href="#" class="btn btn-primary">Check my application status</a>
+        </div>
+      </div>
+
+      <div class="card option">
+        <img class="card-img-top" src="/src/assets/Images/Image2.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Flight Assistance</h5>
+          <p class="card-text">Check out our custom offers for our students.
+          </p>
+          <a href="#" class="btn btn-primary">Search flights now</a>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/footer'); -%>
+  </div>
+  <%- include('./partials/bootstrap-js'); -%>
+</body>
+
+</html>

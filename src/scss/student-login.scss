@@ -21,6 +21,29 @@ h2 {
     font-size: 30pt;
 }
 
+.nav-item {
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
+#message {
+    color: red;
+    font-family: 'Arima Madurai',
+        cursive;
+    font-size: large;
+}
+
+#message2 {
+    text-align: center;
+    margin: 0pt;
+    color: red;
+    padding-left: 6pt;
+    font-family: 'Raleway',
+        'serif';
+}
+
 .orig {
     display: grid;
     grid-auto-columns: 1fr 1fr;

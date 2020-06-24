@@ -8,10 +8,15 @@ let urlencodedPaser = bodyParser.urlencoded({
   extended: false
 });
 
+const express = require('express');
+router.use('/assets', express.static('/src/assets'));
+router.use('/css', express.static('/src/css'));
+router.use('/src', express.static('/src'));
+
 const {
   registerValidation,
   loginValidation
-} = require('./validation');
+} = require('./counselorValidation');
 
 router.route('/register').post(urlencodedPaser, async (req, res) => {
 
@@ -19,7 +24,7 @@ router.route('/register').post(urlencodedPaser, async (req, res) => {
     error
   } = registerValidation(req.body);
   if (error)
-    return res.status(400).send(error.details[0].message);
+    return res.status(400).send(error.details[0].message + '.');
 
   const emailExists = await Counselor.findOne({
     email: req.body.email
@@ -55,25 +60,35 @@ router.route('/login').post(urlencodedPaser, async (req, res) => {
     error
   } = loginValidation(req.body);
   if (error)
-    return res.status(400).send(error.details[0].message);
+    return res.render('counselor-login', {
+      data: JSON.stringify(error.details[0].message + '.')
+    });
+  // return res.status(400).send(error.details[0].message);
 
   const counselorObject = await Counselor.findOne({
     email: req.body.email
   });
   if (!counselorObject)
-    return res.status(400).send('Email or password is incorrect.');
+    return res.render('counselor-login', {
+      data: JSON.stringify('Email or password was incorrect.')
+    });
+  // return res.status(400).send('Email or password is incorrect.');
   // Safer practice when email does not exist.
 
   const validPassword = await bcrypt.compare(req.body.password, counselorObject.password);
   if (!validPassword)
-    return res.status(400).send('Email or password is incorrect.');
+    return res.render('counselor-login', {
+      data: JSON.stringify('Email or password was incorrect.')
+    });
+  // return res.status(400).send('Email or password is incorrect.');
   // Safer practice when password does not match.
 
   const token = jwt.sign({
     _id: counselorObject._id
   }, process.env.TOKEN_SECRET);
 
-  res.header('auth-token', token).send(token);
+  res.setHeader('auth-token', token);
+  res.render('counselor-in');
 
   // res.send('Logged In!');
 
@@ -81,7 +96,9 @@ router.route('/login').post(urlencodedPaser, async (req, res) => {
 
 // COUNSELOR LOGIN ROUTE
 router.route('/login').get((req, res) => {
-  res.render('counselor-login');
+  res.render('counselor-login', {
+    data: JSON.stringify('')
+  });
 });
 
 module.exports = router;

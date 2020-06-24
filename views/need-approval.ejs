@@ -2,8 +2,9 @@
 <html class="no-js" lang="en">
 
 <head>
-  <title>Counselor Login - Envision Overseas</title>
+  <title>Pre Departure - Envision Overseas</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
   <meta http-equiv="pragma" content="no-cache" />
   <meta http-equiv="expires" content="-1" />
 
@@ -14,40 +15,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
   <link rel="stylesheet" href="/css/bootstrap.css" />
   <link rel="stylesheet" href="/css/index-styles.css" />
   <link rel="stylesheet" href="/css/pages-general.css" />
-  <link rel="stylesheet" href="/css/counselor-login.css" />
-
   <%- include('./partials/browser-icons'); -%>
-
 </head>
 
 <body>
   <div class="flex-contain">
-    <div class="container-fluid main">
-      <div class="card">
-        <img src="/assets/Logos/White Logo.svg" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Sign In</h5>
-          <p class="card-text">to continue to Envision-Counselor</p>
-          <form method="post" action="/counselors/login">
-            <input class="form-control" autocomplete="off" required type="text" id="username" name='email'
-              placeholder="Email" />
-            <input class="form-control" autocomplete="off" required type="password" id="password" name='password'
-              placeholder="Password" />
-            <br>
-            <button class="btn form-sub-btn btn-dark">Proceed</button>
-          </form>
-          <br>
-          <p id="message"><%- data.slice(1, -1) -%></p>
-        </div>
-      </div>
+    <%- include('./partials/nav'); -%>
+
+
+    <div class="container-fluid">
+      <h1>
+        <%- data.fname-%>, we have received your information.
+      </h1>
+      <p>
+        Your account needs to be verified before we can let you proceed. You will be notified about your Envision
+        Student account on the email you provided us.
+      </p>
     </div>
 
 
+    <%- include('./partials/footer'); -%>
   </div>
+
+
   <%- include('./partials/bootstrap-js'); -%>
 </body>
 

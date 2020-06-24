@@ -14,6 +14,11 @@ const studentSchema = new Schema({
     trim: true,
     required: true
   },
+  password: {
+    type: String,
+    minlength: 6,
+    trim: true
+  },
   mobile: {
     type: String,
     maxlength: 14,

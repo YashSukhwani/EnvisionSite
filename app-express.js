@@ -38,11 +38,11 @@ connection.once('open', () => {
 
 app.use(express.json());
 
-const studentRouter = require('./routes/students');
+const studentRouter = require('./routes/authStudents');
 app.use('/students', studentRouter);
 
-const authRoute = require('./routes/auth');
-app.use('/api/counselors', authRoute);
+const authRoute = require('./routes/authCounselors');
+app.use('/counselors', authRoute);
 
 const dataRoute = require('./routes/studentData');
 app.use('/api/data', dataRoute);
@@ -63,10 +63,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/login', (req, res) => {
-  res.render('student-login');
-});
-
 app.get('/pre-depart', (req, res) => {
   res.render('pre-depart');
 });
@@ -74,3 +70,5 @@ app.get('/pre-depart', (req, res) => {
 // END OF MAIN PAGE ROUTES
 
 app.listen(3000);
+
+module.exports = app;

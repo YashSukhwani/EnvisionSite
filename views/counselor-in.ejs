@@ -2,8 +2,10 @@
 <html class="no-js" lang="en">
 
 <head>
-  <title>Counselor Login - Envision Overseas</title>
+  <title>Counselor Home - Envision Overseas
+  </title>
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
   <meta http-equiv="pragma" content="no-cache" />
   <meta http-equiv="expires" content="-1" />
 
@@ -14,39 +16,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
   <link rel="stylesheet" href="/css/bootstrap.css" />
   <link rel="stylesheet" href="/css/index-styles.css" />
   <link rel="stylesheet" href="/css/pages-general.css" />
-  <link rel="stylesheet" href="/css/counselor-login.css" />
-
+  <link rel="stylesheet" href="/css/counselor-in.css" />
   <%- include('./partials/browser-icons'); -%>
-
 </head>
 
 <body>
   <div class="flex-contain">
-    <div class="container-fluid main">
-      <div class="card">
-        <img src="/assets/Logos/White Logo.svg" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Sign In</h5>
-          <p class="card-text">to continue to Envision-Counselor</p>
-          <form method="post" action="/counselors/login">
-            <input class="form-control" autocomplete="off" required type="text" id="username" name='email'
-              placeholder="Email" />
-            <input class="form-control" autocomplete="off" required type="password" id="password" name='password'
-              placeholder="Password" />
-            <br>
-            <button class="btn form-sub-btn btn-dark">Proceed</button>
-          </form>
-          <br>
-          <p id="message"><%- data.slice(1, -1) -%></p>
-        </div>
+
+    <%- include('./partials/nav'); -%>
+
+
+    <div class="container-fluid">
+      <h1>Data Operations</h1>
+      <div class="col ten">
+        <button id="getAll" class="btn btn-dark">Get All</button>
+        <button id="getOne" class="btn btn-dark">Get One</button>
+        <button id="updateOne" class="btn btn-dark">Update One</button>
+        <button id="deleteOne" class="btn btn-dark">Delete One</button>
+        <input type="text" name="objectID" placeholder="Object ID" />
       </div>
     </div>
 
+    <div class="container-fluid">
+      <%- -%>
+      <%- -%>
+    </div>
 
+    <%- include('./partials/footer'); -%>
   </div>
   <%- include('./partials/bootstrap-js'); -%>
 </body>
