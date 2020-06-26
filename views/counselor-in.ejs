@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="/css/pages-general.css" />
   <link rel="stylesheet" href="/css/counselor-in.css" />
   <%- include('./partials/browser-icons'); -%>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../src/js/data.js"></script>
 </head>
 
 <body>
@@ -28,11 +31,10 @@
 
     <%- include('./partials/nav'); -%>
 
-
     <div class="container-fluid">
       <h1>Data Operations</h1>
       <div class="col ten">
-        <button id="getAll" class="btn btn-dark">Get All</button>
+        <button onclick="getAll();" id="getAll" class="btn btn-dark">Get All</button>
         <button id="getOne" class="btn btn-dark">Get One</button>
         <button id="updateOne" class="btn btn-dark">Update One</button>
         <button id="deleteOne" class="btn btn-dark">Delete One</button>
@@ -41,13 +43,35 @@
     </div>
 
     <div class="container-fluid">
-      <%- -%>
-      <%- -%>
+      <h2><% %></h2> // put header in the JS space
+      <table>
+        <tr>
+          <th>Object ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Nearest Office</th>
+          <th>Destination</th>
+          <th>Intake</th>
+          <th>Date Added</th>
+          <th>Date Updated</th>
+        </tr>
+        // <% for (var i = 0; i < total; i++) { %>
+        <tr>
+          <td id="id<% %>"></td>
+        <td id="name<% %>"></td>
+          <td id="email<% %>"></td>
+        <td id="phone<% %>"></td>
+          <td id="nearest_office<%- -%>"></td>
+          <td id="destination<% %>"></td>
+        <td id="intake<% %>"></td>
+          <td id="date_added<% %>"></td>
+        <td id="date_updated<% %>"></td>
+        </tr>
+        // <% } %>
+        </table>
+
+
     </div>
 
-    <%- include('./partials/footer'); -%>
-  </div>
-  <%- include('./partials/bootstrap-js'); -%>
-</body>
-
-</html>
+    < <%- include('./partials/footer'); -%> </div> <%- include('./partials/bootstrap-js'); -%> </body> </html>
