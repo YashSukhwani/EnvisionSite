@@ -18,6 +18,11 @@ const {
   loginValidation
 } = require('./studentValidation');
 
+// When students navigate to sign-in page but then do not fill the form but instead click the Envision logo in the navbar,
+// they should be directed back to the home page.
+// However, there is a routing problem, which is why this is not working correctly.
+// Fix it quickly.
+
 router.route('/add').post(urlencodedPaser, async (req, res) => {
 
   const {
