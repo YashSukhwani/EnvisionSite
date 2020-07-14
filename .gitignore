@@ -1,6 +1,10 @@
 node_modules
-JS Practice
+js_practice
+
 .env
-.vscode
-map-key.js
+.DS_Store
+.jsbeautifyrc
+
 gulpfile.js
+map-key.js
+data.js
