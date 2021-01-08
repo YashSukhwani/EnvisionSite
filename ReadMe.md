@@ -1,8 +1,48 @@
 # Envision Website
 
-Envision Overseas is an education company that provides consultation and a wide range of services for students in India wishing to study abroad.
+Envision Overseas is an education consulting company based in India.
 
-This website is a prototype for the company, with complete functionality for students and counselors of the organization.
+The website is mobile-friendly, and runs an application allowing consultants to manage the data of their clients. Node, Express and MongoDB make up the backend for this application, which uses JWT for session-caching.
+
+### API
+
+#### Data
+Let's assume $5ee2e$ is a client object id in the database.
+
+1. Get All Records
+http://localhost:3000/api/data/
+
+2. Get One Record
+http://localhost:3000/api/data/5ee2e
+
+3. Update One Record
+http://localhost:3000/api/data/5ee2e
+
+4. Delete One Record
+http://localhost:3000/api/data/5ee2e
+
+5. Manually Adding a Client Object (without them self-registering)
+http://localhost:3000/api/data/add
+
+###### JSON Object Format for Requests 3 & 5.
+
+{
+    "name": "",
+    "email": "",
+    "mobile": "",
+    "nearest_office": "",
+    "destination": "",
+    "intake": ""
+}
+
+#### Clients
+
+6. Self-registration ('password' field optional, gets hashed with )
+http://localhost:3000/students/add
+
+7. Self-registration with Password
+
+
 
 ## Installation
 
@@ -17,8 +57,3 @@ npm install envis
 ```bash
 npm run-script envis
 ```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
