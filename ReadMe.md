@@ -7,7 +7,7 @@ The website is mobile-friendly, and runs an application allowing consultants to 
 ### API
 
 #### Data
-Let's assume $5ee2e$ is a client object id in the database.
+Let's assume '5ee2e' is a client object id in the database.
 
 1. Get All Records
 http://localhost:3000/api/data/
@@ -37,12 +37,37 @@ http://localhost:3000/api/data/add
 
 #### Clients
 
-6. Self-registration ('password' field optional, gets hashed with )
+6. Self-registration ('password' field optional, gets hashed with bcrypt)
 http://localhost:3000/students/add
 
 7. Self-registration with Password
 
+8. Logging In
+http://localhost:3000/students/login
 
+{
+    "email": "",
+    "password": ""
+}
+
+#### Consultants
+
+9. Registration
+http://localhost:3000/counselors/register
+
+{
+    "email": "",
+    "username": "",
+    "password": ""
+}
+
+10. Logging In
+http://localhost:3000/counselors/login
+
+{
+    "email": "",
+    "password": ""
+}
 
 ## Installation
 
